@@ -4,7 +4,7 @@ title:  "R3GIRL in Paris - R3CTF 2025 Write-up"
 ---
 ## R3GIRL in Paris - R3CTF Write-up
 
-![Banner](<R3CTF 2025/R3GIRL in Paris/assets/files/r3girl-in-parisbanner.png>)
+![Banner](<R3CTF 2025/R3GIRL in Paris/assets/files/r3girl-in-paris/banner.png>)
 
 **Challenge:** R3GIRL in Paris
 **Category:** Misc, OSINT
