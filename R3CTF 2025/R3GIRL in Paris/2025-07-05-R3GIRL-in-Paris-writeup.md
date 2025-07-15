@@ -1,7 +1,3 @@
----
-layout: post
-title:  "R3GIRL in Paris - R3CTF 2025 Write-up"
----
 ## R3GIRL in Paris - R3CTF Write-up
 
 ![Banner](assets/files/r3girl-in-paris/banner.png)
