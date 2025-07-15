@@ -1,6 +1,6 @@
 # CTF Write Up
 Welcome to my Capture The Flag (CTF) Write-Up repository!  
-This is a collection of my personal solutions and explanations for various CTF challenges I’ve attempted, ranging from beginner-friendly puzzles to more advanced, real-world security problems.
+This is a collection of my personal solutions and explanations for various CTF challenges I’ve attempted.
 
 ---
 
