@@ -1,7 +1,3 @@
----
-layout: post
-title:  "BABY MSD - IERAE-CTF 2025 Write-up"
----
 ## BABY MSD - IERAE-CTF 2025 Write-up
 
 ![Banner](assets/img/banner.png)

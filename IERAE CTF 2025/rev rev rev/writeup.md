@@ -1,7 +1,3 @@
----
-layout: post
-title:  "REV REV REV - IERAE-CTF 2025 Write-up"
----
 ## REV REV REV - IERAE-CTF 2025 Write-up
 
 ![Banner](assets/img/banner.png)
