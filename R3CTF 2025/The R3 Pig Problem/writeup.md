@@ -1,7 +1,3 @@
----
-layout: post
-title:  "The R3 Pig Problem - R3CTF 2025 Write-up"
----
 ## The R3 Pig Problem - R3CTF Write-up
 
 ![Banner](assets/img/banner.png)
