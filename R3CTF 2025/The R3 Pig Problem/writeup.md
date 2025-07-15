@@ -4,7 +4,7 @@ title:  "The R3 Pig Problem - R3CTF 2025 Write-up"
 ---
 ## The R3 Pig Problem - R3CTF Write-up
 
-![Banner](/assets/files/the-r3-pig-problem/banner.png)
+![Banner](assets/img/banner.png)
 
 **Challenge:** The R3 Pig Problem
 **Category:** Forensics
@@ -12,7 +12,7 @@ title:  "The R3 Pig Problem - R3CTF 2025 Write-up"
 **Author:** MinousE3
 
 ### Introduction
-In the R3CTF 2025 challenge “The R3 Pig Problem,” we were given a network capture file: [`pig.pcapng`](/assets/files/the-r3-pig-problem/pig.pcapng). The description set an ominous tone, hinting that the capture contained a cryptic and possibly dangerous message. The warning “Do not answer! Do not answer!! Do not answer!!!” was repeated three times, signaling urgency and importance.
+In the R3CTF 2025 challenge “The R3 Pig Problem,” we were given a network capture file: [`pig.pcapng`](assets/files/pig.pcapng). The description set an ominous tone, hinting that the capture contained a cryptic and possibly dangerous message. The warning “Do not answer! Do not answer!! Do not answer!!!” was repeated three times, signaling urgency and importance.
 
 The challenge hinted that the first human-readable message from the mysterious r3kapig world had surfaced—and it was up to us to extract it. Given the .pcapng file format, it was clear that this was a packet capture, most likely intended to be analyzed with tools like Wireshark or tshark.
 
@@ -20,14 +20,14 @@ The main goal was to analyze this packet capture and uncover the hidden message,
 
 With that, we moved into dissecting the contents of pig.pcapng to find what secrets the r3kapig world had left behind.
 
-### Analyzing the [`pig.pcapng`](/assets/files/the-r3-pig-problem/pig.pcapng) File
-The [`pig.pcapng`](/assets/files/the-r3-pig-problem/pig.pcapng) file provided for this challenge hinted at something hidden beneath the surface of seemingly ordinary network traffic. Loading the capture into Wireshark and applying the filter:
+### Analyzing the [`pig.pcapng`](assets/files/pig.pcapng) File
+The [`pig.pcapng`](assets/files/pig.pcapng) file provided for this challenge hinted at something hidden beneath the surface of seemingly ordinary network traffic. Loading the capture into Wireshark and applying the filter:
 ```bash
 data.len > 0
 ```
 quickly narrowed down the focus to a series of small TCP packets sent from ```192.168.0.24``` to ```192.168.0.16``` over port ```1337```. Each packet had a data length of exactly 1 byte, and their uniform structure strongly implied that they were part of a stream-based transmission.
 
-![Analyze 1](/assets/files/the-r3-pig-problem/analyze-1.png)
+![Analyze 1](assets/img/analyze-1.png)
 
 To verify the content of the stream, I used the following command in the terminal:
 ```bash
@@ -52,7 +52,7 @@ To test this theory, I extracted the relative arrival times of each packet using
 tshark -r pig.pcapng -Y "tcp.port == 1337 && data.len > 0" -T fields -e frame.time_relative
 ```
 
-I then wrote a script named [`pigprobsolv.py`](/assets/files/the-r3-pig-problem/pigprobsolv.py) that:
+I then wrote a script named [`pigprobsolv.py`](assets/files/pigprobsolv.py) that:
 1. Compute the time deltas between each packet.
 2. Use a threshold (0.1 seconds) to classify each delta as a ```0``` or ```1```.
 3. Group bits into 8-bit chunks.
