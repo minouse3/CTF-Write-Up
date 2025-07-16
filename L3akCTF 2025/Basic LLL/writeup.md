@@ -1,7 +1,3 @@
----
-layout: post
-title:  "Basic LLL - L3akCTF 2025 Write-up"
----
 ## Basic LLL - L3akCTF 2025 Write-up
 
 ![Banner](assets/img/banner.png)
@@ -57,7 +53,7 @@ The rest of the script follows a classic RSA flow. The message (in this case, th
 
 Although the script does not directly give us `p` or `q`, the structure of `k` and the known values are enough to recover `p` — and once we do that, decrypting the flag becomes a straightforward RSA problem. This design — giving us a leaky expression involving `p` — is exactly what we’ll take advantage of in the next section.
 
-#How to solve it?
+### How to solve it?
 To solve this challenge, we take advantage of the structure of the leaked value `k = x * y + a * p`. Since `x`, `a`, and `k` are known, and `x` is a very small integer (only 16 bits), we can approximate the value of `p` by estimating `y` and rearranging the equation. This leads us to a clever trick: if we try several values of `y` near the estimate and plug them into the equation, we can test whether the resulting candidate `p` divides `n`. If it does, we’ve found the correct `p`, and factoring `n` becomes trivial.
 
 Here’s the solving script used [`basic-lll-solve.sage`](assets/files/basic-solve.sage):
