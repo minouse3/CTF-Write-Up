@@ -27,7 +27,7 @@ For this challenge, I chose to use hashcat — a powerful GPU-accelerated passwo
 
 Since these are simple MD5 hashes, I used the hash mode 0 which tells hashcat to treat them as raw MD5. Here's the exact command I ran:
 ```bash
-hashcat -m 0 -a 0 -o output.txt hash.txt rockyou.txt
+hashcat -m 0 -a 0 -o output.txt hash.txt /usr/share/wordlists/rockyou.txt
 ```
 After running the command, Hashcat successfully cracked all three hashes. The found.txt file contained the following:
 ```bash
