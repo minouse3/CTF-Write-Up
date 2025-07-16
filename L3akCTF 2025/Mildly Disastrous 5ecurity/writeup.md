@@ -1,7 +1,3 @@
----
-layout: post
-title:  "Mildly Disastrous 5ecurity - L3akCTF 2025 Write-up"
----
 ## Mildly Disastrous 5ecurity - L3akCTF 2025 Write-up
 
 ![Banner](assets/img/banner.png)
