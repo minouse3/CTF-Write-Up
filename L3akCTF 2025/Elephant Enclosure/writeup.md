@@ -8,12 +8,12 @@
 **Author:** MinousE3
 
 ### Introduction
-The Elephant Enclosure challenge is one of eight GeoGuessr-style OSINT challenges hosted at `https://geosint.ctf.l3ak.team/`. Players are presented with an embedded Street View scene and are tasked with identifying the precise real-world location. Once a user selects a point on the map and submits it, the platform returns a yes/no response, and a flag if correct. The challenges vary in difficulty and require attention to detail, reverse image searching, and geolocation skills.
+The Elephant Enclosure challenge is one of eight GeoGuessr-style OSINT challenges hosted at [https://geosint.ctf.l3ak.team/](https://geosint.ctf.l3ak.team/). Players are presented with an embedded Street View scene and are tasked with identifying the precise real-world location. Once a user selects a point on the map and submits it, the platform returns a yes/no response, and a flag if correct. The challenges vary in difficulty and require attention to detail, reverse image searching, and geolocation skills.
 
 ![Introduction](assets/img/introduction.png)
 
 ### Analyzing the Given Data
-Upon entering the scene at `https://geosint.ctf.l3ak.team/L3akCTF-elephant_enclosure`, we are greeted by a tropical setting with lush greenery and a wooden boardwalk. Prominent features include:
+Upon entering the scene at [https://geosint.ctf.l3ak.team/L3akCTF-elephant_enclosure](https://geosint.ctf.l3ak.team/L3akCTF-elephant_enclosure), we are greeted by a tropical setting with lush greenery and a wooden boardwalk. Prominent features include:
 
 * A thatched-roof pavilion used as a shaded viewing platform.
 * Signs in English, including “Exit” and accessibility indicators.
@@ -35,6 +35,7 @@ However, knowing the zoo wasn’t enough — the challenge required us to pinpoi
 ![Method-3](assets/img/method-3.png)
 
 Using Google Maps, we navigated to that area and eventually spotted a distinctive three-square-shaped building, which had available Street View coverage.
+[https://maps.app.goo.gl/cYuMcAfVkJb6MfXy8](https://maps.app.goo.gl/cYuMcAfVkJb6MfXy8)
 
 ![Method-4](assets/img/method-4.png)
 
