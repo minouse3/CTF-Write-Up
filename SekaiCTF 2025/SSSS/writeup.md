@@ -25,7 +25,7 @@ The key to solving this challenge is realizing that we can treat the polynomial 
 
 In the first round, we recover a set of candidate coefficients that could contain the secret. However, we don’t know which coefficient is actually the secret because it was inserted at a random index. That’s where the two-round weakness comes in. The server uses the same secret again in the second round, but with a completely new random polynomial. By repeating the DFT trick, we get a second set of candidate coefficients. The true secret is the only value that appears in both sets. So, by simply intersecting the two candidate lists, we can extract the secret with high confidence.
 
-Once we have the secret, we just send it back to the server as the final guess, and in return, the flag is printed. The full solver code [**chall.py**](assets/files/ssss_solver.py) that implements this idea is shown below:
+Once we have the secret, we just send it back to the server as the final guess, and in return, the flag is printed. The full solver code [**ssss_solver.py**](assets/files/ssss_solver.py) that implements this idea is shown below:
 ```py
 #!/usr/bin/env python3
 from pwn import remote, context
