@@ -8,7 +8,7 @@
 **Author:** minouse3
 
 ### Introduction
-This challenge was a small forensic puzzle involving USB traffic. The story was that a private file had been copied to a USB drive and then deleted, but somehow it could still be recovered from the USB messages that were recorded. We were given a packet capture file, [`usbstorage.pcapng.gz`](assets/files/usbstorage.pcapng.gz), and our goal was to dig through it and recover the lost flag.
+The challenge is name is webby, with the hint/description: “MFA is awesome! Even if someone gets our login credentials, and they still can't get our secrets!” What we’re given is a live site at http://52.59.124.14:5010 and, crucially, a way to view the application source by visiting /?source=anything, which lets us analyze exactly how authentication and MFA are implemented.
 
 ### Analyzing the website
 When you visit /?source=anything, the app happily returns its own source. That happens in index.GET: it parses query params with i = web.input() and, if i.source exists (any non-empty value), it executes return open(__file__).read(). There’s no path traversal or file choice—__file__ is just “this script”, so you get a straight source disclosure.
