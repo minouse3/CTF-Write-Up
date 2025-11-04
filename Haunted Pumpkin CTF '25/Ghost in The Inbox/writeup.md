@@ -20,15 +20,15 @@ By common sense, no one will phish someone with their real name. They must be im
 
 ![method-1](assets/method-1.png)
 
-And yeah, just like that you can see who is the sender, which is "OSINT Switzerland" with an email ctf@cultoftherabbit.team. So, the answer is ctf@cultoftherabbit.com.
+And yeah, just like that you can see who is the sender, which is "OSINT Switzerland" with an email ctf@cultoftherabbit.team. So, the answer is ctf@cultoftherabbit.team.
 
 If you still not sure, just put it side by side to see if the flag format match the answer. Like this using any text editors: <br>
 ```
-hpCTF{***********************}
-hpCTF{ctf@cultoftherabbit.com}
+hpCTF{************************}
+hpCTF{ctf@cultoftherabbit.team}
 ```
 
 ### Flag
 ```
-hpCTF{ctf@cultoftherabbit.com}
+hpCTF{ctf@cultoftherabbit.team}
 ```
